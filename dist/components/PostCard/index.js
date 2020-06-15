@@ -48,7 +48,7 @@ var PostCard = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostCard.__proto__ || Object.getPrototypeOf(PostCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "content"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostCard.__proto__ || Object.getPrototypeOf(PostCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "content", "isList"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostCard, [{
@@ -68,18 +68,34 @@ var PostCard = (_temp2 = _class = function (_Taro$Component) {
       ;
       var _props = this.__props,
           title = _props.title,
-          content = _props.content;
+          content = _props.content,
+          isList = _props.isList;
 
+
+      function handleClick() {
+        if (isList) {
+          _taroWeapp2.default.navigateTo({
+            url: "/pages/post/post?title=" + title + "&content=" + content
+          });
+        }
+      }
+
+      this.anonymousFunc0 = handleClick;
       Object.assign(this.__state, {
         title: title,
         content: content
       });
       return this.__state;
     }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(e) {
+      ;
+    }
   }]);
 
   return PostCard;
-}(_taroWeapp2.default.Component), _class.$$events = [], _class.$$componentPath = "components/PostCard/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "components/PostCard/index", _temp2);
 exports.default = PostCard;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(PostCard));

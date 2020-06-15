@@ -54,7 +54,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '首页'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "loopArray27", "$compid__67", "posts"], _this.customComponents = ["PostCard", "PostForm"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "loopArray7", "$compid__19", "posts"], _this.customComponents = ["PostCard", "PostForm"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -73,10 +73,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__67"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__19"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__67 = _genCompid2[0],
-          $compid__67 = _genCompid2[1];
+          $prevCompid__19 = _genCompid2[0],
+          $compid__19 = _genCompid2[1];
 
       var _useState = (0, _taroWeapp.useState)([{
         title: '1',
@@ -102,6 +102,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           title: formTitle,
           content: formContent
         }]));
+        setFormTitle('');
+        setFormContent('');
       }
 
       var anonymousState__temp = function anonymousState__temp(e) {
@@ -112,22 +114,23 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         return setFormContent(e.target.value);
       };
 
-      var loopArray27 = posts.map(function (post, index) {
+      var loopArray7 = posts.map(function (post, index) {
         post = {
           $original: (0, _taroWeapp.internal_get_original)(post)
         };
 
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + 'djzzzzzzzz' + index, true),
+        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + 'bdzzzzzzzz' + index, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__66 = _genCompid4[0],
-            $compid__66 = _genCompid4[1];
+            $prevCompid__18 = _genCompid4[0],
+            $compid__18 = _genCompid4[1];
 
         _taroWeapp.propsManager.set({
           "title": post.$original.title,
-          "content": post.$original.content
-        }, $compid__66, $prevCompid__66);
+          "content": post.$original.content,
+          "isList": true
+        }, $compid__18, $prevCompid__18);
         return {
-          $compid__66: $compid__66,
+          $compid__18: $compid__18,
           $original: post.$original
         };
       });
@@ -137,12 +140,12 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         "handleSubmit": handleSubmit,
         "handleTitleInput": anonymousState__temp,
         "handleContentInput": anonymousState__temp2
-      }, $compid__67, $prevCompid__67);
+      }, $compid__19, $prevCompid__19);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
-        loopArray27: loopArray27,
-        $compid__67: $compid__67,
+        loopArray7: loopArray7,
+        $compid__19: $compid__19,
         posts: posts
       });
       return this.__state;

@@ -80,24 +80,24 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       return this.__state;
     }
   }, {
-    key: "funPrivatebbzzz",
-    value: function funPrivatebbzzz() {
+    key: "funPrivatefzzzz",
+    value: function funPrivatefzzzz() {
       return this.props.handleSubmit.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }, {
-    key: "funPrivatebczzz",
-    value: function funPrivatebczzz() {
+    key: "funPrivategzzzz",
+    value: function funPrivategzzzz() {
       return this.props.handleTitleInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }, {
-    key: "funPrivatebdzzz",
-    value: function funPrivatebdzzz() {
+    key: "funPrivatehzzzz",
+    value: function funPrivatehzzzz() {
       return this.props.handleContentInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }]);
 
   return PostForm;
-}(_taroWeapp2.default.Component), _class.$$events = ["funPrivatebbzzz", "funPrivatebczzz", "funPrivatebdzzz"], _class.$$componentPath = "components/PostForm/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["funPrivatefzzzz", "funPrivategzzzz", "funPrivatehzzzz"], _class.$$componentPath = "components/PostForm/index", _temp2);
 exports.default = PostForm;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(PostForm));

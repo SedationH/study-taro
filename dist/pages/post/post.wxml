@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="post">
+        <post-card compid="{{$compid__7}}"></post-card>
+    </view>
+</block>

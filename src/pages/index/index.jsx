@@ -20,6 +20,8 @@ export default function Index() {
       title: formTitle,
       content: formContent
     }])
+    setFormTitle('')
+    setFormContent('')
   }
 
   return (
@@ -30,6 +32,7 @@ export default function Index() {
             key={index}
             title={post.title}
             content={post.content}
+            isList
           />
         ))
       }
