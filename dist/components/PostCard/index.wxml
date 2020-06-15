@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="postcard">
+        <view class="post-title">{{title}}</view>
+        <view class="post-content">{{content}}</view>
+    </view>
+</block>
