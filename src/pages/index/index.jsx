@@ -59,11 +59,15 @@ export default function Index() {
           handleContentInput={e => setFormContent(e.target.value)}
         />
       </AtFloatLayout>
-      <View className="post-button">
-        <AtFab onClick={() => setIsOpen(true)}>
-          <Text className="at-fab__icon at-icon at-icon-edit"></Text>
-        </AtFab>
-      </View>
+      {
+        !isOpen && (
+          <View className="post-button">
+            <AtFab onClick={() => setIsOpen(true)}>
+              <Text className="at-fab__icon at-icon at-icon-edit"></Text>
+            </AtFab>
+          </View>
+        )
+      }
     </View>
   )
 }

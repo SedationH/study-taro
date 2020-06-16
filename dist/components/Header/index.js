@@ -1,9 +1,9 @@
-(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["components/PostForm/index"],{
+(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["components/Header/index"],{
 
-/***/ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT&":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT& ***!
-  \**************************************************************************************************************************************************************/
+/***/ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT& ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26,7 +26,7 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-__webpack_require__(/*! ./index.scss */ "./src/components/PostForm/index.scss");
+__webpack_require__(/*! ./index.scss */ "./src/components/Header/index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,27 +36,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PostForm = (_temp2 = _class = function (_Taro$Component) {
-  _inherits(PostForm, _Taro$Component);
+var Header = (_temp2 = _class = function (_Taro$Component) {
+  _inherits(Header, _Taro$Component);
 
-  function PostForm() {
+  function Header() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, PostForm);
+    _classCallCheck(this, Header);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostForm.__proto__ || Object.getPrototypeOf(PostForm)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__17", "formTitle", "formContent", "handleSubmit", "handleTitleInput", "handleContentInput", "__fn_onSubmit", "__fn_onInput"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__33", "$compid__34", "$compid__35", "isLogged", "userInfo", "setLoginInfo", "handleClick"], _this.customComponents = ["AtMessage", "LoggedMine", "LoginButton", "WeappLoginButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(PostForm, [{
+  _createClass(Header, [{
     key: "_constructor",
     value: function _constructor(props) {
-      _get(PostForm.prototype.__proto__ || Object.getPrototypeOf(PostForm.prototype), "_constructor", this).call(this, props);
+      _get(Header.prototype.__proto__ || Object.getPrototypeOf(Header.prototype), "_constructor", this).call(this, props);
 
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
@@ -69,76 +69,76 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__17"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__33"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__17 = _genCompid2[0],
-          $compid__17 = _genCompid2[1];
+          $prevCompid__33 = _genCompid2[0],
+          $compid__33 = _genCompid2[1];
+
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__34"),
+          _genCompid4 = _slicedToArray(_genCompid3, 2),
+          $prevCompid__34 = _genCompid4[0],
+          $compid__34 = _genCompid4[1];
+
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__35"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__35 = _genCompid6[0],
+          $compid__35 = _genCompid6[1];
 
       var _props = this.__props,
-          handleSubmit = _props.handleSubmit,
-          formTitle = _props.formTitle,
-          handleTitleInput = _props.handleTitleInput,
-          formContent = _props.formContent,
-          handleContentInput = _props.handleContentInput;
+          userInfo = _props.userInfo,
+          setLoginInfo = _props.setLoginInfo,
+          isLogged = _props.isLogged,
+          handleClick = _props.handleClick;
 
       _taroWeapp.propsManager.set({
-        "formType": "submit",
-        "type": "primary"
-      }, $compid__17, $prevCompid__17);
+        "userInfo": userInfo
+      }, $compid__33, $prevCompid__33);
+      !isLogged && _taroWeapp.propsManager.set({
+        "handleClick": handleClick
+      }, $compid__34, $prevCompid__34);
+      !isLogged && _taroWeapp.propsManager.set({
+        "setLoginInfo": setLoginInfo
+      }, $compid__35, $prevCompid__35);
       Object.assign(this.__state, {
-        $compid__17: $compid__17,
-        formTitle: formTitle,
-        formContent: formContent
+        $compid__33: $compid__33,
+        $compid__34: $compid__34,
+        $compid__35: $compid__35,
+        isLogged: isLogged
       });
       return this.__state;
     }
-  }, {
-    key: "funPrivateizzzz",
-    value: function funPrivateizzzz() {
-      return this.props.handleSubmit.apply(undefined, Array.prototype.slice.call(arguments, 1));
-    }
-  }, {
-    key: "funPrivatejzzzz",
-    value: function funPrivatejzzzz() {
-      return this.props.handleTitleInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
-    }
-  }, {
-    key: "funPrivatebazzz",
-    value: function funPrivatebazzz() {
-      return this.props.handleContentInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
-    }
   }]);
 
-  return PostForm;
-}(_taroWeapp2.default.Component), _class.$$events = ["funPrivateizzzz", "funPrivatejzzzz", "funPrivatebazzz"], _class.$$componentPath = "components/PostForm/index", _temp2);
-exports.default = PostForm;
+  return Header;
+}(_taroWeapp2.default.Component), _class.$$events = [], _class.$$componentPath = "components/Header/index", _temp2);
+exports.default = Header;
 
-Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(PostForm));
+Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(Header));
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "components/PostForm/index.wxml";
+module.exports = __webpack_require__.p + "components/Header/index.wxml";
 
 /***/ }),
 
-/***/ "./src/components/PostForm/index.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/PostForm/index.jsx ***!
-  \*******************************************/
+/***/ "./src/components/Header/index.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/Header/index.jsx ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.jsx?taro&type=template&parse=COMPONENT& */ "./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT&");
-/* harmony import */ var _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.jsx?taro&type=script&parse=COMPONENT& */ "./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT&");
+/* harmony import */ var _index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.jsx?taro&type=template&parse=COMPONENT& */ "./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT&");
+/* harmony import */ var _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.jsx?taro&type=script&parse=COMPONENT& */ "./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT&");
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
@@ -146,42 +146,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT&":
-/*!*****************************************************************************!*\
-  !*** ./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT& ***!
-  \*****************************************************************************/
+/***/ "./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT&":
+/*!***************************************************************************!*\
+  !*** ./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT& ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=script&parse=COMPONENT& */ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/PostForm/index.jsx?taro&type=script&parse=COMPONENT&");
+/* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=script&parse=COMPONENT& */ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Header/index.jsx?taro&type=script&parse=COMPONENT&");
 /* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT&":
-/*!*******************************************************************************!*\
-  !*** ./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT& ***!
-  \*******************************************************************************/
+/***/ "./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT&":
+/*!*****************************************************************************!*\
+  !*** ./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT& ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/PostForm/index.jsx?taro&type=template&parse=COMPONENT&");
+/* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Header/index.jsx?taro&type=template&parse=COMPONENT&");
 /* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ "./src/components/PostForm/index.scss":
-/*!********************************************!*\
-  !*** ./src/components/PostForm/index.scss ***!
-  \********************************************/
+/***/ "./src/components/Header/index.scss":
+/*!******************************************!*\
+  !*** ./src/components/Header/index.scss ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -189,4 +189,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[["./src/components/PostForm/index.jsx","runtime","taro","vendors"]]]);
+},[["./src/components/Header/index.jsx","runtime","taro","vendors"]]]);

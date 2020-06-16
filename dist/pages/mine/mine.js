@@ -14,6 +14,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
@@ -23,10 +25,6 @@ var _class, _temp2;
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
-
-var _avatar = __webpack_require__(/*! ../../images/avatar.jpg */ "./src/images/avatar.jpg");
-
-var _avatar2 = _interopRequireDefault(_avatar);
 
 __webpack_require__(/*! ./mine.scss */ "./src/pages/mine/mine.scss");
 
@@ -56,7 +54,7 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Mine.__proto__ || Object.getPrototypeOf(Mine)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '我的'
-    }, _this.$usedState = ["avatar"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "$compid__63"], _this.customComponents = ["Header"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Mine, [{
@@ -75,10 +73,43 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__63"),
+          _genCompid2 = _slicedToArray(_genCompid, 2),
+          $prevCompid__63 = _genCompid2[0],
+          $compid__63 = _genCompid2[1];
+
       _objectDestructuringEmpty(this.__props);
 
+      var _useState = (0, _taroWeapp.useState)(''),
+          _useState2 = _slicedToArray(_useState, 2),
+          nickName = _useState2[0],
+          setNickName = _useState2[1];
+
+      var _useState3 = (0, _taroWeapp.useState)(''),
+          _useState4 = _slicedToArray(_useState3, 2),
+          avatar = _useState4[0],
+          setAvatar = _useState4[1];
+
+      var isLogged = !!nickName;
+
+      function handleClick() {
+        console.log('handleClick');
+      }
+
+      function setLoginInfo() {
+        console.log('setLoginInfo');
+      }
+
+      var anonymousState__temp = { avatar: avatar, nickName: nickName };
+      _taroWeapp.propsManager.set({
+        "isLogged": isLogged,
+        "userInfo": anonymousState__temp,
+        "handleClick": handleClick,
+        "setLoginInfo": setLoginInfo
+      }, $compid__63, $prevCompid__63);
       Object.assign(this.__state, {
-        avatar: _avatar2.default
+        anonymousState__temp: anonymousState__temp,
+        $compid__63: $compid__63
       });
       return this.__state;
     }
@@ -103,17 +134,6 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "pages/mine/mine.wxml";
-
-/***/ }),
-
-/***/ "./src/images/avatar.jpg":
-/*!*******************************!*\
-  !*** ./src/images/avatar.jpg ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/avatar.jpg";
 
 /***/ }),
 

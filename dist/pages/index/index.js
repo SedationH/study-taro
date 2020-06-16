@@ -54,7 +54,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '首页'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "loopArray17", "$compid__75", "$compid__76", "$compid__77", "posts"], _this.customComponents = ["AtMessage", "PostCard", "AtFloatLayout", "PostForm", "AtFab"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "loopArray1", "$compid__13", "$compid__14", "$compid__15", "posts", "isOpen"], _this.customComponents = ["AtMessage", "PostCard", "AtFloatLayout", "PostForm", "AtFab"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -73,20 +73,20 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__75"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__75 = _genCompid2[0],
-          $compid__75 = _genCompid2[1];
+          $prevCompid__13 = _genCompid2[0],
+          $compid__13 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__76"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__76 = _genCompid4[0],
-          $compid__76 = _genCompid4[1];
+          $prevCompid__14 = _genCompid4[0],
+          $compid__14 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__77"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__77 = _genCompid6[0],
-          $compid__77 = _genCompid6[1];
+          $prevCompid__15 = _genCompid6[0],
+          $compid__15 = _genCompid6[1];
 
       var _useState = (0, _taroWeapp.useState)([{
         title: '1',
@@ -144,23 +144,23 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         return setIsOpen(true);
       };
 
-      var loopArray17 = posts.map(function (post, index) {
+      var loopArray1 = posts.map(function (post, index) {
         post = {
           $original: (0, _taroWeapp.internal_get_original)(post)
         };
 
-        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'cjzzzzzzzz' + index, true),
+        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'hzzzzzzzzz' + index, true),
             _genCompid8 = _slicedToArray(_genCompid7, 2),
-            $prevCompid__74 = _genCompid8[0],
-            $compid__74 = _genCompid8[1];
+            $prevCompid__12 = _genCompid8[0],
+            $compid__12 = _genCompid8[1];
 
         _taroWeapp.propsManager.set({
           "title": post.$original.title,
           "content": post.$original.content,
           "isList": true
-        }, $compid__74, $prevCompid__74);
+        }, $compid__12, $prevCompid__12);
         return {
-          $compid__74: $compid__74,
+          $compid__12: $compid__12,
           $original: post.$original
         };
       });
@@ -168,25 +168,26 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         "isOpened": isOpen,
         "title": '\u53D1\u8868\u65B0\u6587\u7AE0',
         "onClose": this.anonymousFunc0
-      }, $compid__75, $prevCompid__75);
+      }, $compid__13, $prevCompid__13);
       _taroWeapp.propsManager.set({
         "formTitle": formTitle,
         "formContent": formContent,
         "handleSubmit": handleSubmit,
         "handleTitleInput": anonymousState__temp,
         "handleContentInput": anonymousState__temp2
-      }, $compid__76, $prevCompid__76);
-      _taroWeapp.propsManager.set({
+      }, $compid__14, $prevCompid__14);
+      !isOpen && _taroWeapp.propsManager.set({
         "onClick": this.anonymousFunc1
-      }, $compid__77, $prevCompid__77);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
-        loopArray17: loopArray17,
-        $compid__75: $compid__75,
-        $compid__76: $compid__76,
-        $compid__77: $compid__77,
-        posts: posts
+        loopArray1: loopArray1,
+        $compid__13: $compid__13,
+        $compid__14: $compid__14,
+        $compid__15: $compid__15,
+        posts: posts,
+        isOpen: isOpen
       });
       return this.__state;
     }

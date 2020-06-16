@@ -1,19 +1,36 @@
-import { View, Image } from '@tarojs/components'
-import avatar from '../../images/avatar.jpg'
+import Taro, { useState } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import { Header } from '../../components'
+
 import './mine.scss'
 
 export default function Mine({
 
 }) {
 
+  const [nickName, setNickName] = useState('')
+  const [avatar, setAvatar] = useState('')
+
+  const isLogged = !!nickName
+
+  function handleClick() {
+    console.log('handleClick')
+  }
+
+  function setLoginInfo() {
+    console.log('setLoginInfo')
+  }
+
   return (
-    <View className="mine">
-      <View>
-        <Image src={avatar} className="mine-avatar" />
-        <View className="mine-nickName">晨曦</View>
-        <View className="mine-username">SedationH</View>
-      </View>
-      <View className="mine-footer">Study From 图雀社区</View>
+    <View
+      className="mine"
+    >
+      <Header
+        isLogged={isLogged}
+        userInfo={{ avatar, nickName }}
+        handleClick={handleClick}
+        setLoginInfo={setLoginInfo}
+      />
     </View>
   )
 }

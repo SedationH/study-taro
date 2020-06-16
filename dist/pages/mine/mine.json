@@ -1,1 +1,1 @@
-{"usingComponents":{},"navigationBarTitleText":"我的"}
+{"usingComponents":{"header":"../../components/Header/index"},"navigationBarTitleText":"我的"}

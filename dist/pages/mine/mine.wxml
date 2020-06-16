@@ -1,10 +1,5 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="mine">
-        <view>
-            <image src="{{avatar}}" class="mine-avatar"></image>
-            <view class="mine-nickName">晨曦</view>
-            <view class="mine-username">SedationH</view>
-        </view>
-        <view class="mine-footer">Study From 图雀社区</view>
+        <header compid="{{$compid__63}}"></header>
     </view>
 </block>
