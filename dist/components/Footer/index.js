@@ -1,9 +1,9 @@
-(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["components/LoginButton/index"],{
+(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["components/Footer/index"],{
 
-/***/ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT&":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT& ***!
-  \*****************************************************************************************************************************************************************/
+/***/ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT& ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34,27 +34,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LoginButton = (_temp2 = _class = function (_Taro$Component) {
-  _inherits(LoginButton, _Taro$Component);
+var Footer = (_temp2 = _class = function (_Taro$Component) {
+  _inherits(Footer, _Taro$Component);
 
-  function LoginButton() {
+  function Footer() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, LoginButton);
+    _classCallCheck(this, Footer);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__23", "handleClick"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Footer.__proto__ || Object.getPrototypeOf(Footer)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__133", "isLogged", "handleLogout"], _this.customComponents = ["Logout"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(LoginButton, [{
+  _createClass(Footer, [{
     key: "_constructor",
     value: function _constructor(props) {
-      _get(LoginButton.prototype.__proto__ || Object.getPrototypeOf(LoginButton.prototype), "_constructor", this).call(this, props);
+      _get(Footer.prototype.__proto__ || Object.getPrototypeOf(Footer.prototype), "_constructor", this).call(this, props);
 
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
@@ -67,54 +67,56 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__23"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__133"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__23 = _genCompid2[0],
-          $compid__23 = _genCompid2[1];
+          $prevCompid__133 = _genCompid2[0],
+          $compid__133 = _genCompid2[1];
 
-      var handleClick = this.__props.handleClick;
+      var _props = this.__props,
+          handleLogout = _props.handleLogout,
+          isLogged = _props.isLogged;
 
-      _taroWeapp.propsManager.set({
-        "type": "primary",
-        "onClick": this.__props.handleClick
-      }, $compid__23, $prevCompid__23);
+      isLogged && _taroWeapp.propsManager.set({
+        "handleLogout": handleLogout
+      }, $compid__133, $prevCompid__133);
       Object.assign(this.__state, {
-        $compid__23: $compid__23
+        $compid__133: $compid__133,
+        isLogged: isLogged
       });
       return this.__state;
     }
   }]);
 
-  return LoginButton;
-}(_taroWeapp2.default.Component), _class.$$events = [], _class.$$componentPath = "components/LoginButton/index", _temp2);
-exports.default = LoginButton;
+  return Footer;
+}(_taroWeapp2.default.Component), _class.$$events = [], _class.$$componentPath = "components/Footer/index", _temp2);
+exports.default = Footer;
 
-Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(LoginButton));
+Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(Footer));
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "components/LoginButton/index.wxml";
+module.exports = __webpack_require__.p + "components/Footer/index.wxml";
 
 /***/ }),
 
-/***/ "./src/components/LoginButton/index.jsx":
-/*!**********************************************!*\
-  !*** ./src/components/LoginButton/index.jsx ***!
-  \**********************************************/
+/***/ "./src/components/Footer/index.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/Footer/index.jsx ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.jsx?taro&type=template&parse=COMPONENT& */ "./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT&");
-/* harmony import */ var _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.jsx?taro&type=script&parse=COMPONENT& */ "./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT&");
+/* harmony import */ var _index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.jsx?taro&type=template&parse=COMPONENT& */ "./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT&");
+/* harmony import */ var _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.jsx?taro&type=script&parse=COMPONENT& */ "./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT&");
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
@@ -122,36 +124,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT&":
-/*!********************************************************************************!*\
-  !*** ./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT& ***!
-  \********************************************************************************/
+/***/ "./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT&":
+/*!***************************************************************************!*\
+  !*** ./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT& ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=script&parse=COMPONENT& */ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/LoginButton/index.jsx?taro&type=script&parse=COMPONENT&");
+/* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=script&parse=COMPONENT& */ "./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Footer/index.jsx?taro&type=script&parse=COMPONENT&");
 /* harmony import */ var _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_script_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT&":
-/*!**********************************************************************************!*\
-  !*** ./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT& ***!
-  \**********************************************************************************/
+/***/ "./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT&":
+/*!*****************************************************************************!*\
+  !*** ./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT& ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/LoginButton/index.jsx?taro&type=template&parse=COMPONENT&");
+/* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.jsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/sedationh/test/ultra-club/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Footer/index.jsx?taro&type=template&parse=COMPONENT&");
 /* harmony import */ var _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_file_loader_dist_cjs_js_name_path_name_wxml_context_Users_sedationh_test_ultra_club_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_jsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ })
 
-},[["./src/components/LoginButton/index.jsx","runtime","taro","vendors"]]]);
+},[["./src/components/Footer/index.jsx","runtime","taro","vendors"]]]);

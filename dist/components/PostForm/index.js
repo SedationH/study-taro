@@ -50,7 +50,7 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostForm.__proto__ || Object.getPrototypeOf(PostForm)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__17", "formTitle", "formContent", "handleSubmit", "handleTitleInput", "handleContentInput", "__fn_onSubmit", "__fn_onInput"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostForm.__proto__ || Object.getPrototypeOf(PostForm)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__18", "formTitle", "formContent", "handleSubmit", "handleTitleInput", "handleContentInput", "__fn_onSubmit", "__fn_onInput"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostForm, [{
@@ -69,10 +69,10 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__17"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__18"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__17 = _genCompid2[0],
-          $compid__17 = _genCompid2[1];
+          $prevCompid__18 = _genCompid2[0],
+          $compid__18 = _genCompid2[1];
 
       var _props = this.__props,
           handleSubmit = _props.handleSubmit,
@@ -84,9 +84,9 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "formType": "submit",
         "type": "primary"
-      }, $compid__17, $prevCompid__17);
+      }, $compid__18, $prevCompid__18);
       Object.assign(this.__state, {
-        $compid__17: $compid__17,
+        $compid__18: $compid__18,
         formTitle: formTitle,
         formContent: formContent
       });

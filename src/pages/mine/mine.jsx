@@ -1,6 +1,6 @@
-import Taro, { useState } from '@tarojs/taro'
+import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { Header } from '../../components'
+import { Header, Footer } from '../../components'
 
 import './mine.scss'
 
@@ -13,12 +13,53 @@ export default function Mine({
 
   const isLogged = !!nickName
 
+  useEffect(() => {
+    async function getStorage() {
+      try {
+        const { data } = await Taro.getStorage({
+          key: 'userInfo',
+        })
+        const { nickName, avatarUrl } = data
+        setAvatar(avatarUrl)
+        setNickName(nickName)
+      } catch (err) {
+        console.log('getStorage ERR:', err)
+      }
+    }
+
+    getStorage()
+  }, [])
+
   function handleClick() {
     console.log('handleClick')
   }
 
-  function setLoginInfo() {
-    console.log('setLoginInfo')
+  async function setLoginInfo({
+    avatarUrl,
+    nickName
+  }) {
+    setNickName(nickName)
+    setAvatar(avatarUrl)
+
+    try {
+      await Taro.setStorage({
+        key: 'userInfo',
+        data: { avatarUrl, nickName }
+      })
+    } catch (err) {
+      console.log('setStorage ERR:', err)
+    }
+  }
+
+  async function handleLogout() {
+    try {
+      await Taro.removeStorage({ key: 'userInfo' })
+
+      setAvatar('')
+      setNickName('')
+    } catch (err) {
+      console.log('removeStorage ERR: ', err)
+    }
   }
 
   return (
@@ -30,6 +71,10 @@ export default function Mine({
         userInfo={{ avatar, nickName }}
         handleClick={handleClick}
         setLoginInfo={setLoginInfo}
+      />
+      <Footer
+        isLogged={isLogged}
+        handleLogout={handleLogout}
       />
     </View>
   )

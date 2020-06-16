@@ -50,7 +50,7 @@ var Header = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__33", "$compid__34", "$compid__35", "isLogged", "userInfo", "setLoginInfo", "handleClick"], _this.customComponents = ["AtMessage", "LoggedMine", "LoginButton", "WeappLoginButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__20", "$compid__21", "$compid__22", "isLogged", "userInfo", "setLoginInfo", "handleClick"], _this.customComponents = ["AtMessage", "LoggedMine", "LoginButton", "WeappLoginButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Header, [{
@@ -69,20 +69,20 @@ var Header = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__33"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__20"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__33 = _genCompid2[0],
-          $compid__33 = _genCompid2[1];
+          $prevCompid__20 = _genCompid2[0],
+          $compid__20 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__34"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__21"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__34 = _genCompid4[0],
-          $compid__34 = _genCompid4[1];
+          $prevCompid__21 = _genCompid4[0],
+          $compid__21 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__35"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__22"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__35 = _genCompid6[0],
-          $compid__35 = _genCompid6[1];
+          $prevCompid__22 = _genCompid6[0],
+          $compid__22 = _genCompid6[1];
 
       var _props = this.__props,
           userInfo = _props.userInfo,
@@ -92,17 +92,17 @@ var Header = (_temp2 = _class = function (_Taro$Component) {
 
       _taroWeapp.propsManager.set({
         "userInfo": userInfo
-      }, $compid__33, $prevCompid__33);
+      }, $compid__20, $prevCompid__20);
       !isLogged && _taroWeapp.propsManager.set({
         "handleClick": handleClick
-      }, $compid__34, $prevCompid__34);
+      }, $compid__21, $prevCompid__21);
       !isLogged && _taroWeapp.propsManager.set({
         "setLoginInfo": setLoginInfo
-      }, $compid__35, $prevCompid__35);
+      }, $compid__22, $prevCompid__22);
       Object.assign(this.__state, {
-        $compid__33: $compid__33,
-        $compid__34: $compid__34,
-        $compid__35: $compid__35,
+        $compid__20: $compid__20,
+        $compid__21: $compid__21,
+        $compid__22: $compid__22,
         isLogged: isLogged
       });
       return this.__state;

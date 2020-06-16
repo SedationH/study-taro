@@ -52,7 +52,7 @@ var YourShouldGiveTheComponentAName = (_temp2 = _class = function (_Taro$Compone
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = YourShouldGiveTheComponentAName.__proto__ || Object.getPrototypeOf(YourShouldGiveTheComponentAName)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["userinfo", "avatar"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = YourShouldGiveTheComponentAName.__proto__ || Object.getPrototypeOf(YourShouldGiveTheComponentAName)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["userInfo", "avatar"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(YourShouldGiveTheComponentAName, [{
@@ -70,8 +70,8 @@ var YourShouldGiveTheComponentAName = (_temp2 = _class = function (_Taro$Compone
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var _props$userinfo = this.__props.userinfo,
-          userinfo = _props$userinfo === undefined ? {} : _props$userinfo;
+      var _props$userInfo = this.__props.userInfo,
+          userInfo = _props$userInfo === undefined ? {} : _props$userInfo;
 
 
       function onImageClick() {
@@ -82,7 +82,7 @@ var YourShouldGiveTheComponentAName = (_temp2 = _class = function (_Taro$Compone
 
       this.anonymousFunc0 = onImageClick;
       Object.assign(this.__state, {
-        userinfo: userinfo,
+        userInfo: userInfo,
         avatar: _avatar2.default
       });
       return this.__state;

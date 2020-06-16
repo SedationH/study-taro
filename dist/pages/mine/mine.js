@@ -14,6 +14,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29,6 +33,8 @@ var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 __webpack_require__(/*! ./mine.scss */ "./src/pages/mine/mine.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
 
@@ -54,7 +60,7 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Mine.__proto__ || Object.getPrototypeOf(Mine)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '我的'
-    }, _this.$usedState = ["anonymousState__temp", "$compid__63"], _this.customComponents = ["Header"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "$compid__126", "$compid__127"], _this.customComponents = ["Header", "Footer"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Mine, [{
@@ -67,16 +73,98 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
   }, {
     key: '_createData',
     value: function _createData() {
+      var setLoginInfo = function () {
+        var _ref5 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2(_ref4) {
+          var avatarUrl = _ref4.avatarUrl,
+              nickName = _ref4.nickName;
+          return _regenerator2.default.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  setNickName(nickName);
+                  setAvatar(avatarUrl);
+
+                  _context2.prev = 2;
+                  _context2.next = 5;
+                  return _taroWeapp2.default.setStorage({
+                    key: 'userInfo',
+                    data: { avatarUrl: avatarUrl, nickName: nickName }
+                  });
+
+                case 5:
+                  _context2.next = 10;
+                  break;
+
+                case 7:
+                  _context2.prev = 7;
+                  _context2.t0 = _context2['catch'](2);
+
+                  console.log('setStorage ERR:', _context2.t0);
+
+                case 10:
+                case 'end':
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, this, [[2, 7]]);
+        }));
+
+        return function setLoginInfo(_x) {
+          return _ref5.apply(this, arguments);
+        };
+      }();
+
+      var handleLogout = function () {
+        var _ref6 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee3() {
+          return _regenerator2.default.wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  _context3.prev = 0;
+                  _context3.next = 3;
+                  return _taroWeapp2.default.removeStorage({ key: 'userInfo' });
+
+                case 3:
+
+                  setAvatar('');
+                  setNickName('');
+                  _context3.next = 10;
+                  break;
+
+                case 7:
+                  _context3.prev = 7;
+                  _context3.t0 = _context3['catch'](0);
+
+                  console.log('removeStorage ERR: ', _context3.t0);
+
+                case 10:
+                case 'end':
+                  return _context3.stop();
+              }
+            }
+          }, _callee3, this, [[0, 7]]);
+        }));
+
+        return function handleLogout() {
+          return _ref6.apply(this, arguments);
+        };
+      }();
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__63"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__126"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__63 = _genCompid2[0],
-          $compid__63 = _genCompid2[1];
+          $prevCompid__126 = _genCompid2[0],
+          $compid__126 = _genCompid2[1];
+
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__127"),
+          _genCompid4 = _slicedToArray(_genCompid3, 2),
+          $prevCompid__127 = _genCompid4[0],
+          $compid__127 = _genCompid4[1];
 
       _objectDestructuringEmpty(this.__props);
 
@@ -92,12 +180,55 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
 
       var isLogged = !!nickName;
 
+      (0, _taroWeapp.useEffect)(function () {
+        var getStorage = function () {
+          var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+            var _ref3, data, _nickName, avatarUrl;
+
+            return _regenerator2.default.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.prev = 0;
+                    _context.next = 3;
+                    return _taroWeapp2.default.getStorage({
+                      key: 'userInfo'
+                    });
+
+                  case 3:
+                    _ref3 = _context.sent;
+                    data = _ref3.data;
+                    _nickName = data.nickName, avatarUrl = data.avatarUrl;
+
+                    setAvatar(avatarUrl);
+                    setNickName(_nickName);
+                    _context.next = 13;
+                    break;
+
+                  case 10:
+                    _context.prev = 10;
+                    _context.t0 = _context['catch'](0);
+
+                    console.log('getStorage ERR:', _context.t0);
+
+                  case 13:
+                  case 'end':
+                    return _context.stop();
+                }
+              }
+            }, _callee, this, [[0, 10]]);
+          }));
+
+          return function getStorage() {
+            return _ref2.apply(this, arguments);
+          };
+        }();
+
+        getStorage();
+      }, []);
+
       function handleClick() {
         console.log('handleClick');
-      }
-
-      function setLoginInfo() {
-        console.log('setLoginInfo');
       }
 
       var anonymousState__temp = { avatar: avatar, nickName: nickName };
@@ -106,10 +237,15 @@ var Mine = (_temp2 = _class = function (_Taro$Component) {
         "userInfo": anonymousState__temp,
         "handleClick": handleClick,
         "setLoginInfo": setLoginInfo
-      }, $compid__63, $prevCompid__63);
+      }, $compid__126, $prevCompid__126);
+      _taroWeapp.propsManager.set({
+        "isLogged": isLogged,
+        "handleLogout": handleLogout
+      }, $compid__127, $prevCompid__127);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__63: $compid__63
+        $compid__126: $compid__126,
+        $compid__127: $compid__127
       });
       return this.__state;
     }

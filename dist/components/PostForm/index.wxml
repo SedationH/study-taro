@@ -6,7 +6,7 @@
                 <input class="input-title" type="text" placeholder="请输入标题" value="{{formTitle}}" bindinput="funPrivatejzzzz" />
                 <view class="form-hint">正文</view>
                 <textarea placeholder="点击输入正文" class="input-content" value="{{formContent}}" bindinput="funPrivatebazzz"></textarea>
-                <at-button compid="{{$compid__17}}">提交</at-button>
+                <at-button compid="{{$compid__18}}">提交</at-button>
             </view>
         </form>
     </view>

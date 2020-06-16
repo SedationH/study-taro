@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{isLogged}}">
+        <logout compid="{{$compid__133}}"></logout>
+    </block>
+</block>

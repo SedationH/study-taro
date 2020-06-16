@@ -10,13 +10,9 @@ export default function LoginButton({
 
   async function onGetUserInfo(e) {
     setIsLogin(true)
-    console.log(e)
-    await new Promise(resolve => {
-      setTimeout(() => {
-        setLoginInfo()
-        resolve()
-      },2000)
-    })
+
+    const { avatarUrl, nickName } = e.detail.userInfo
+    await setLoginInfo({ avatarUrl, nickName })
     setIsLogin(false)
   }
 
