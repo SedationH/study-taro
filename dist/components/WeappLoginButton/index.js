@@ -30,6 +30,10 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
+
+var _index = __webpack_require__(/*! ../../constants/index */ "./src/constants/index.js");
+
 __webpack_require__(/*! ./index.scss */ "./src/components/WeappLoginButton/index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -56,7 +60,7 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["isLogin", "setLoginInfo"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["isLogin"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(LoginButton, [{
@@ -69,33 +73,82 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
   }, {
     key: "_createData",
     value: function _createData() {
-      var onGetUserInfo = function () {
-        var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(e) {
-          var _e$detail$userInfo, avatarUrl, nickName;
-
+      var setLoginInfo = function () {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(_ref2) {
+          var avatarUrl = _ref2.avatarUrl,
+              nickName = _ref2.nickName;
           return _regenerator2.default.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
-                  setIsLogin(true);
+                  _context.prev = 0;
+                  _context.next = 3;
+                  return _taroWeapp2.default.setStorage({
+                    key: 'userInfo',
+                    data: { avatarUrl: avatarUrl, nickName: nickName }
+                  });
 
-                  _e$detail$userInfo = e.detail.userInfo, avatarUrl = _e$detail$userInfo.avatarUrl, nickName = _e$detail$userInfo.nickName;
-                  _context.next = 4;
-                  return setLoginInfo({ avatarUrl: avatarUrl, nickName: nickName });
-
-                case 4:
-                  setIsLogin(false);
+                case 3:
+                  _context.next = 8;
+                  break;
 
                 case 5:
+                  _context.prev = 5;
+                  _context.t0 = _context["catch"](0);
+
+                  console.log('setStorage ERR:', _context.t0);
+
+                case 8:
+
+                  dispatch({
+                    type: _index.SET_LOGIN_INFO,
+                    payload: {
+                      avatarUrl: avatarUrl,
+                      nickName: nickName
+                    }
+                  });
+
+                case 9:
                 case "end":
                   return _context.stop();
               }
             }
-          }, _callee, this);
+          }, _callee, this, [[0, 5]]);
         }));
 
-        return function onGetUserInfo(_x) {
-          return _ref2.apply(this, arguments);
+        return function setLoginInfo(_x) {
+          return _ref3.apply(this, arguments);
+        };
+      }();
+
+      var onGetUserInfo = function () {
+        var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2(e) {
+          var _e$detail$userInfo, avatarUrl, nickName;
+
+          return _regenerator2.default.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  setIsLogin(true);
+
+                  _e$detail$userInfo = e.detail.userInfo, avatarUrl = _e$detail$userInfo.avatarUrl, nickName = _e$detail$userInfo.nickName;
+                  _context2.next = 4;
+                  return setLoginInfo({ avatarUrl: avatarUrl, nickName: nickName });
+
+                case 4:
+
+                  setIsLogin(false);
+
+                case 5:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, this);
+        }));
+
+        return function onGetUserInfo(_x2) {
+          return _ref4.apply(this, arguments);
         };
       }();
 
@@ -104,12 +157,13 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var setLoginInfo = this.__props.setLoginInfo;
 
       var _useState = (0, _taroWeapp.useState)(false),
           _useState2 = _slicedToArray(_useState, 2),
           isLogin = _useState2[0],
           setIsLogin = _useState2[1];
+
+      var dispatch = (0, _redux.useDispatch)();
 
       this.anonymousFunc0 = onGetUserInfo;
       Object.assign(this.__state, {
@@ -204,4 +258,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[["./src/components/WeappLoginButton/index.jsx","runtime","taro","vendors"]]]);
+},[["./src/components/WeappLoginButton/index.jsx","runtime","taro","vendors","common"]]]);

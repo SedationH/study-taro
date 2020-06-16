@@ -24,9 +24,7 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-var _avatar = __webpack_require__(/*! ../../images/avatar.jpg */ "./src/images/avatar.jpg");
-
-var _avatar2 = _interopRequireDefault(_avatar);
+var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
 
 __webpack_require__(/*! ./index.scss */ "./src/components/LoggedMine/index.scss");
 
@@ -52,7 +50,7 @@ var YourShouldGiveTheComponentAName = (_temp2 = _class = function (_Taro$Compone
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = YourShouldGiveTheComponentAName.__proto__ || Object.getPrototypeOf(YourShouldGiveTheComponentAName)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["userInfo", "avatar"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = YourShouldGiveTheComponentAName.__proto__ || Object.getPrototypeOf(YourShouldGiveTheComponentAName)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["avatar", "nickName"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(YourShouldGiveTheComponentAName, [{
@@ -70,20 +68,23 @@ var YourShouldGiveTheComponentAName = (_temp2 = _class = function (_Taro$Compone
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var _props$userInfo = this.__props.userInfo,
-          userInfo = _props$userInfo === undefined ? {} : _props$userInfo;
 
-
+      var nickName = (0, _redux.useSelector)(function (state) {
+        return state.user.nickName;
+      });
+      var avatar = (0, _redux.useSelector)(function (state) {
+        return state.user.avatarUrl;
+      });
       function onImageClick() {
         _taroWeapp2.default.previewImage({
-          urls: [userInfo.avatar]
+          urls: [avatar]
         });
       }
 
       this.anonymousFunc0 = onImageClick;
       Object.assign(this.__state, {
-        userInfo: userInfo,
-        avatar: _avatar2.default
+        avatar: avatar,
+        nickName: nickName
       });
       return this.__state;
     }
@@ -171,17 +172,6 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/images/avatar.jpg":
-/*!*******************************!*\
-  !*** ./src/images/avatar.jpg ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/avatar.jpg";
 
 /***/ })
 

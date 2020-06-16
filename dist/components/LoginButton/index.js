@@ -48,7 +48,7 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__23", "handleClick"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__16", "handleClick"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(LoginButton, [{
@@ -67,19 +67,19 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__23"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__16"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__23 = _genCompid2[0],
-          $compid__23 = _genCompid2[1];
+          $prevCompid__16 = _genCompid2[0],
+          $compid__16 = _genCompid2[1];
 
       var handleClick = this.__props.handleClick;
 
       _taroWeapp.propsManager.set({
         "type": "primary",
         "onClick": this.__props.handleClick
-      }, $compid__23, $prevCompid__23);
+      }, $compid__16, $prevCompid__16);
       Object.assign(this.__state, {
-        $compid__23: $compid__23
+        $compid__16: $compid__16
       });
       return this.__state;
     }

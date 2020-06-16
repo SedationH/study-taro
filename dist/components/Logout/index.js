@@ -14,6 +14,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26,7 +30,13 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
+
+var _index = __webpack_require__(/*! ../../constants/index */ "./src/constants/index.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -48,7 +58,7 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__119", "handleLogout"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LoginButton.__proto__ || Object.getPrototypeOf(LoginButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__47"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(LoginButton, [{
@@ -61,28 +71,74 @@ var LoginButton = (_temp2 = _class = function (_Taro$Component) {
   }, {
     key: "_createData",
     value: function _createData() {
+      var handleLogout = function () {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+          return _regenerator2.default.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.prev = 0;
+                  _context.next = 3;
+                  return _taroWeapp2.default.removeStorage({ key: 'userInfo' });
+
+                case 3:
+                  dispatch({
+                    type: _index.SET_LOGIN_INFO,
+                    payload: {
+                      avatarUrl: '',
+                      nickName: ''
+                    }
+                  });
+                  _context.next = 9;
+                  break;
+
+                case 6:
+                  _context.prev = 6;
+                  _context.t0 = _context["catch"](0);
+
+                  console.log('removeStorage ERR: ', _context.t0);
+
+                case 9:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee, this, [[0, 6]]);
+        }));
+
+        return function handleLogout() {
+          return _ref2.apply(this, arguments);
+        };
+      }();
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__119"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__47"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__119 = _genCompid2[0],
-          $compid__119 = _genCompid2[1];
+          $prevCompid__47 = _genCompid2[0],
+          $compid__47 = _genCompid2[1];
 
-      var handleLogout = this.__props.handleLogout;
+      var dispatch = (0, _redux.useDispatch)();
 
+      this.anonymousFunc0 = handleLogout;
       _taroWeapp.propsManager.set({
         "type": "secondary",
         "full": true,
-        "onClick": this.__props.handleLogout
-      }, $compid__119, $prevCompid__119);
+        "onClick": this.anonymousFunc0
+      }, $compid__47, $prevCompid__47);
       Object.assign(this.__state, {
-        $compid__119: $compid__119
+        $compid__47: $compid__47
       });
       return this.__state;
+    }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(e) {
+      ;
     }
   }]);
 
@@ -155,4 +211,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[["./src/components/Logout/index.jsx","runtime","taro","vendors"]]]);
+},[["./src/components/Logout/index.jsx","runtime","taro","vendors","common"]]]);

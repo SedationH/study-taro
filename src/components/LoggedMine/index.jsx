@@ -1,25 +1,27 @@
 import { View, Image } from '@tarojs/components'
-import avatar from '../../images/avatar.jpg'
+import { useSelector } from '@tarojs/redux'
+
 import './index.scss'
 
-export default function ({
-  userInfo = {}
-}) {
+export default function () {
+
+  const nickName = useSelector(state => state.user.nickName)
+  const avatar = useSelector(state => state.user.avatarUrl)
   function onImageClick() {
     Taro.previewImage({
-      urls: [userInfo.avatar],
+      urls: [avatar],
     })
   }
 
   return (
     <View className="logged-mine">
       <Image
-        src={userInfo.avatar ? userInfo.avatar : avatar}
+        src={avatar}
         className="mine-avatar"
         onClick={onImageClick}
       />
       <View className="mine-nickName">
-        {userInfo.nickName ? userInfo.nickName : 'SedationH'}
+        {nickName}
       </View>
     </View>
   )

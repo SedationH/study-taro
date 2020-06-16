@@ -1,3 +1,3 @@
 <block wx:if="{{$taroCompReady}}">
-    <at-button compid="{{$compid__23}}">普通登陆</at-button>
+    <at-button compid="{{$compid__16}}">普通登陆</at-button>
 </block>

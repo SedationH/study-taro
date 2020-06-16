@@ -1,13 +1,13 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="index">
         <at-message></at-message>
-        <post-card wx:key="index" wx:for="{{loopArray1}}" wx:for-item="post" wx:for-index="index" compid="{{post.$compid__14}}"></post-card>
-        <at-float-layout compid="{{$compid__15}}">
-            <post-form compid="{{$compid__16}}"></post-form>
+        <post-card wx:key="index" wx:for="{{loopArray1}}" wx:for-item="post" wx:for-index="index" compid="{{post.$compid__9}}"></post-card>
+        <at-float-layout compid="{{$compid__10}}">
+            <post-form compid="{{$compid__11}}"></post-form>
         </at-float-layout>
         <block wx:if="{{!isOpen}}">
             <view class="post-button">
-                <at-fab compid="{{$compid__17}}"><text class="at-fab__icon at-icon at-icon-edit"></text>
+                <at-fab compid="{{$compid__12}}"><text class="at-fab__icon at-icon at-icon-edit"></text>
                 </at-fab>
             </view>
         </block>

@@ -1,1 +1,1 @@
-{"component":true,"usingComponents":{"at-message":"../../npm/taro-ui/dist/weapp/components/message/index","logged-mine":"../LoggedMine/index","login-button":"../LoginButton/index","weapp-login-button":"../WeappLoginButton/index"}}
+{"component":true,"usingComponents":{"at-message":"../../npm/taro-ui/dist/weapp/components/message/index","logged-mine":"../LoggedMine/index","weapp-login-button":"../WeappLoginButton/index"}}
