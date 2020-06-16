@@ -52,7 +52,7 @@ var Post = (_temp2 = _class = function (_Taro$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Post.__proto__ || Object.getPrototypeOf(Post)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '帖子详情'
-    }, _this.$usedState = ["$compid__7"], _this.customComponents = ["PostCard"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["$compid__11"], _this.customComponents = ["PostCard"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Post, [{
@@ -71,10 +71,10 @@ var Post = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__7"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__7 = _genCompid2[0],
-          $compid__7 = _genCompid2[1];
+          $prevCompid__11 = _genCompid2[0],
+          $compid__11 = _genCompid2[1];
 
       _objectDestructuringEmpty(this.__props);
 
@@ -85,9 +85,9 @@ var Post = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "title": params.title,
         "content": params.content
-      }, $compid__7, $prevCompid__7);
+      }, $compid__11, $prevCompid__11);
       Object.assign(this.__state, {
-        $compid__7: $compid__7
+        $compid__11: $compid__11
       });
       return this.__state;
     }

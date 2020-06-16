@@ -24,6 +24,10 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+var _classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 __webpack_require__(/*! ./index.scss */ "./src/components/PostCard/index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -48,18 +52,18 @@ var PostCard = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostCard.__proto__ || Object.getPrototypeOf(PostCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "content", "isList"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostCard.__proto__ || Object.getPrototypeOf(PostCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "title", "content", "isList"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostCard, [{
-    key: "_constructor",
+    key: '_constructor',
     value: function _constructor(props) {
-      _get(PostCard.prototype.__proto__ || Object.getPrototypeOf(PostCard.prototype), "_constructor", this).call(this, props);
+      _get(PostCard.prototype.__proto__ || Object.getPrototypeOf(PostCard.prototype), '_constructor', this).call(this, props);
 
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
   }, {
-    key: "_createData",
+    key: '_createData',
     value: function _createData() {
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
@@ -80,15 +84,17 @@ var PostCard = (_temp2 = _class = function (_Taro$Component) {
         }
       }
 
+      var anonymousState__temp = (0, _classnames2.default)('postcard', { postcard_isList: isList });
       this.anonymousFunc0 = handleClick;
       Object.assign(this.__state, {
+        anonymousState__temp: anonymousState__temp,
         title: title,
         content: content
       });
       return this.__state;
     }
   }, {
-    key: "anonymousFunc0",
+    key: 'anonymousFunc0',
     value: function anonymousFunc0(e) {
       ;
     }

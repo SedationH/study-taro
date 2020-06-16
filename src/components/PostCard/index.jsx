@@ -1,4 +1,5 @@
 import { View } from '@tarojs/components'
+import classNames from 'classnames'
 
 import './index.scss'
 
@@ -18,7 +19,10 @@ export default function PostCard({
   }
 
   return (
-    <View className="postcard" onClick={handleClick}>
+    <View className={classNames(
+      'postcard',
+      { postcard_isList: isList }
+    )} onClick={handleClick}>
       <View className="post-title">{title}</View>
       <View className="post-content">{content}</View>
     </View>

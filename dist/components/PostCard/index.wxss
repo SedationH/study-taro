@@ -1,6 +1,8 @@
 .postcard {
   margin: 30rpx;
   padding: 20rpx;
+}
+.postcard_isList {
   border: 1rpx solid #ddd;
 }
 .post-title {

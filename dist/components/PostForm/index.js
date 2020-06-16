@@ -14,6 +14,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
@@ -48,7 +50,7 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostForm.__proto__ || Object.getPrototypeOf(PostForm)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["formTitle", "formContent", "handleSubmit", "handleTitleInput", "handleContentInput", "__fn_onSubmit", "__fn_onInput"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostForm.__proto__ || Object.getPrototypeOf(PostForm)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__13", "formTitle", "formContent", "handleSubmit", "handleTitleInput", "handleContentInput", "__fn_onSubmit", "__fn_onInput"], _this.customComponents = ["AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostForm, [{
@@ -66,6 +68,12 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
+
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
+          _genCompid2 = _slicedToArray(_genCompid, 2),
+          $prevCompid__13 = _genCompid2[0],
+          $compid__13 = _genCompid2[1];
+
       var _props = this.__props,
           handleSubmit = _props.handleSubmit,
           formTitle = _props.formTitle,
@@ -73,31 +81,36 @@ var PostForm = (_temp2 = _class = function (_Taro$Component) {
           formContent = _props.formContent,
           handleContentInput = _props.handleContentInput;
 
+      _taroWeapp.propsManager.set({
+        "formType": "submit",
+        "type": "primary"
+      }, $compid__13, $prevCompid__13);
       Object.assign(this.__state, {
+        $compid__13: $compid__13,
         formTitle: formTitle,
         formContent: formContent
       });
       return this.__state;
     }
   }, {
-    key: "funPrivatefzzzz",
-    value: function funPrivatefzzzz() {
+    key: "funPrivatebbzzz",
+    value: function funPrivatebbzzz() {
       return this.props.handleSubmit.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }, {
-    key: "funPrivategzzzz",
-    value: function funPrivategzzzz() {
+    key: "funPrivatebczzz",
+    value: function funPrivatebczzz() {
       return this.props.handleTitleInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }, {
-    key: "funPrivatehzzzz",
-    value: function funPrivatehzzzz() {
+    key: "funPrivatebdzzz",
+    value: function funPrivatebdzzz() {
       return this.props.handleContentInput.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }]);
 
   return PostForm;
-}(_taroWeapp2.default.Component), _class.$$events = ["funPrivatefzzzz", "funPrivategzzzz", "funPrivatehzzzz"], _class.$$componentPath = "components/PostForm/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["funPrivatebbzzz", "funPrivatebczzz", "funPrivatebdzzz"], _class.$$componentPath = "components/PostForm/index", _temp2);
 exports.default = PostForm;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(PostForm));

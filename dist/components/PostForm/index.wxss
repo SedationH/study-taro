@@ -1,6 +1,5 @@
 .post-form {
-  border: 1rpx solid #ddd;
-  margin: 30rpx;
+  margin: 0 30rpx;
   padding: 30rpx;
 }
 .input-title {
@@ -19,7 +18,4 @@
   color: gray;
   margin-top: 20rpx;
   margin-bottom: 10rpx;
-}
-.form-button {
-  margin-top: 40rpx;
 }
